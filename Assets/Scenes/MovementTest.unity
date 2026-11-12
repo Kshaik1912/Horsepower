@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HorseMovement
   maxSpeed: 6
-  acceleration: 4
+  acceleration: 7
   deceleration: 6
 --- !u!61 &22456310
 BoxCollider2D:
