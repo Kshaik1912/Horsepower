@@ -41,18 +41,17 @@ public class GameManager : MonoBehaviour
         else if (currentState == GameState.Delivery)
         {
             currentState = GameState.Talking;
-            Debug.Log("conversation over!");
-            NextState();
         }
         else if (currentState == GameState.Talking)
         {
+            Debug.Log("conversation over!");
             currentState = GameState.Upgrade;
-            Debug.Log("update over!");
-            loopNumber++;
             NextState();
         }
         else if (currentState == GameState.Upgrade)
         {
+            Debug.Log("update over!");
+            loopNumber++;
             currentState = GameState.Pickup;
             Debug.Log("Loop: " + loopNumber);
             SpawnGoal();
@@ -73,7 +72,7 @@ public class GameManager : MonoBehaviour
         }
 
         currentGoal = Instantiate(goalPrefab, position, Quaternion.identity);
-}
+    }
 
 
 
